@@ -120,31 +120,51 @@ h3 {
     top: 10px; /* Aumente o valor de 'top' para mover mais para baixo */
 } 
 /* Letras A+L sobre todos os elementos */
-body {
+    body {
     position: relative;
 }
 
 /* Letras A+L sobre todos os elementos */
-h3 {
-    position: absolute; /* Fixa o texto sobre os outros elementos */
-    top: 1125px; /* Distância do topo da página */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translateX(-50%); /* Centraliza corretamente */
+    h3 {
+    position: absolute;
     font-size: 50px;
-    color: white; /* Ou a cor que preferir */
+    color: #000;
     font-weight: bold;
-    z-index: 9999; /* Garante que o texto fique sobre os outros elementos */
+    z-index: 9999;
+    left: 50%;
+    transform: translateX(-50%);  /* Garante que o texto fique centralizado */
+    top: 100px;  /* Definindo a posição padrão do texto */
 }
 
-/* Responsividade - Ajusta o tamanho e posição do texto no celular */
-@media (max-width: 768px) {
+/* Responsividade para tablets (telas médias) */
+@media (max-width: 1199px) and (min-width: 768px) {
     h3 {
-        font-size: 40px; /* Reduz o tamanho da fonte em telas pequenas */
-        top: 1670px; /* Ajusta a posição do texto em telas menores */
+        top: 1140px;   /* Ajuste para telas médias */
+        font-size: 40px;
     }
 }
-hr {
-    border: 1px solid black; /* Linha preta */
-    width: 100%;             /* Linha ocupa toda a largura */
-    margin: 20px 0;          /* Espaço em cima e embaixo da linha */
+
+/* Responsividade para smartphones (telas pequenas) */
+@media (max-width: 2400px) and (min-width: 1080px){
+    h3 {
+        top: 1120px;   /* Ajuste para telas pequenas */
+        font-size: 30px;
+    }
 }
+
+/* Resolução específica 811px x 641px */
+@media (max-width: 811px) and (max-height: 641px) {
+    h3 {
+        top: 965px;   /* Ajusta a posição do "A+L" para essa resolução específica */
+        font-size: 45px;  /* Ajusta o tamanho da fonte */
+    }
+}
+
+/* Resolução grande (Desktop) - se necessário, ajusta para telas grandes */
+@media (min-width: 1200px) {
+    h3 {
+        top: 1125px;  /* Ajuste a posição vertical conforme necessário para telas grandes */
+        font-size: 50px;  /* Tamanho padrão para telas grandes */
+    }
+}
+

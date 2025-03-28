@@ -80,11 +80,6 @@ a button:hover {
 .coracao::before { top: -75px; left: 0; }
 .coracao::after { top: 0; left: 75px; }
 
-/* Letras A+L */
-h3 {
-    font-size: 50px;
-    margin-top: -25px; /* Ajusta a posição */
-}
 
 /* 🔹🔹🔹 Estilos para Celular 🔹🔹🔹 */
 @media (max-width: 768px) {
@@ -107,9 +102,7 @@ h3 {
         align-items: center;
     }
 
-    h3 {
-        font-size: 40px;
-    }
+   
 } .coracao {
     width: 150px;
     height: 150px;
@@ -123,48 +116,3 @@ h3 {
     body {
     position: relative;
 }
-
-/* Letras A+L sobre todos os elementos */
-    h3 {
-    position: absolute;
-    font-size: 50px;
-    color: #000;
-    font-weight: bold;
-    z-index: 9999;
-    left: 50%;
-    transform: translateX(-50%);  /* Garante que o texto fique centralizado */
-    top: 100px;  /* Definindo a posição padrão do texto */
-}
-
-/* Responsividade para tablets (telas médias) */
-@media (max-width: 1199px) and (min-width: 768px) {
-    h3 {
-        top: 1140px;   /* Ajuste para telas médias */
-        font-size: 40px;
-    }
-}
-
-/* Responsividade para smartphones (telas pequenas) */
-@media (max-width: 2400px) and (min-width: 1080px){
-    h3 {
-        top: 1120px;   /* Ajuste para telas pequenas */
-        font-size: 30px;
-    }
-}
-
-/* Resolução específica 811px x 641px */
-@media (max-width: 811px) and (max-height: 641px) {
-    h3 {
-        top: 965px;   /* Ajusta a posição do "A+L" para essa resolução específica */
-        font-size: 45px;  /* Ajusta o tamanho da fonte */
-    }
-}
-
-/* Resolução grande (Desktop) - se necessário, ajusta para telas grandes */
-@media (min-width: 1200px) {
-    h3 {
-        top: 1125px;  /* Ajuste a posição vertical conforme necessário para telas grandes */
-        font-size: 50px;  /* Tamanho padrão para telas grandes */
-    }
-}
-
